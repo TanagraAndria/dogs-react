@@ -12,8 +12,15 @@
     display: flex;
     align-items: center;
     font-weight: bold;
+    margin-left: 2rem;
+    color: #f1c000;
 }
 
 .logo{
     max-width: 4rem;
+}
+
+p{
+    font-size: 1.5rem;
+    margin-left: 1rem;
 }
