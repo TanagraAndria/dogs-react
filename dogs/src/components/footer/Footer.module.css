@@ -7,8 +7,13 @@
     position: fixed;
     width: 100%;
     z-index: 100;
+    justify-content: center;
 }
 
 .git{
-    max-width: 4rem;
+    max-width: 2rem;
+}
+
+.a{
+    color: white;
 }

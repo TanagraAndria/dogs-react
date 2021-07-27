@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <div className={styles.footer}>
           <img src={git} alt="" className={styles.git} />
-          <a href="https://github.com/TanagraAndria"> Tânagra Andria</a> 
+          <a  className={styles.a}href="https://github.com/TanagraAndria"> Tânagra Andria</a> 
         </div>
     )
 }
