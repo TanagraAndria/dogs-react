@@ -28,8 +28,8 @@ export const LoginForm = () => {
         <section>
             <h1>Login</h1>
             <form action="" onSubmit={handleSubmit}>
-                <Input label="Usuário" type="text" name="username"/>
-                <Input label="Senha" type="password" name="password"/>
+                <Input label="Usuário" type="text" name="username" value={username} onChange={(event) => setUsername(event.target.value)}/>
+                <Input label="Senha" type="password" name="password"  value={password} onChange={(event) => setPassword(event.target.value)}/>
                 <Button>Entrar</Button>
             </form>
           
