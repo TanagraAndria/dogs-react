@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import { Input } from '../inputs/Input';
 import { Button } from '../button/Button';
+import { TOKEN_POST } from '../../api';
 
 export const LoginForm = () => {
     const [username, setUsername]= React.useState('');
@@ -9,6 +10,8 @@ export const LoginForm = () => {
 
     function handleSubmit(event) {
          event.preventDefault();
+         const api  = TOKEN_POST({username, password});
+         console.log(api);
         fetch("https://dogsapi.origamid.dev/json/jwt-auth/v1/token", {
             method: 'POST',
             headers: {
