@@ -1,42 +1,54 @@
-import React from 'react'
-import {Link} from 'react-router-dom';
-import { Input } from '../inputs/Input';
-import { Button } from '../button/Button';
-import { TOKEN_POST } from '../../api';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Input from '../inputs/Input';
+import Button from '../button/Button';
+import useForm from '../../Hooks/useForm';
+import { UserContext } from '../../UserContext';
+import Error from '../Helper/Error';
+import styles from './LoginForm.module.css';
+import stylesBtn from '../button/Button.module.css';
+import Head from '../Helper/Head';
 
-export const LoginForm = () => {
-    const [username, setUsername]= React.useState('');
-    const [password, setPassword]= React.useState('');
+const LoginForm = () => {
+  const username = useForm();
+  const password = useForm();
 
-    function handleSubmit(event) {
-         event.preventDefault();
-         const api  = TOKEN_POST({username, password});
-         console.log(api);
-        fetch("https://dogsapi.origamid.dev/json/jwt-auth/v1/token", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({username, password}),
-        })
-            .then((response) =>{
-                console.log(response);
-                return response.json();})
-            .then((json) => {
-                console.log(json);
-            });
+  const { userLogin, error, loading } = React.useContext(UserContext);
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    if (username.validate() && password.validate()) {
+      userLogin(username.value, password.value);
     }
-    
-    return (
-        <section>
-            <h1>Login</h1>
-            <form action="" onSubmit={handleSubmit}>
-                <Input label="Usuário" type="text" name="username" value={username} onChange={(event) => setUsername(event.target.value)}/>
-                <Input label="Senha" type="password" name="password"  value={password} onChange={(event) => setPassword(event.target.value)}/>
-                <Button>Entrar</Button>
-            </form>
-          
-            <p><Link to="/create" >Cadastre-se! </Link></p>
-        </section>
-    )
-}
+  }
+
+  return (
+    <section className="animeLeft">
+      <Head title="Login" />
+      <h1 className="title">Login</h1>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <Input label="Usuário" type="text" name="username" {...username} />
+        <Input label="Senha" type="password" name="password" {...password} />
+        {loading ? (
+          <Button disabled>Carregando...</Button>
+        ) : (
+          <Button>Entrar</Button>
+        )}
+        <Error error={error && 'Dados incorretos.'} />
+      </form>
+      <Link className={styles.perdeu} to="/login/perdeu">
+        Perdeu a Senha?
+      </Link>
+      <div className={styles.cadastro}>
+        <h2 className={styles.subtitle}>Cadastre-se</h2>
+        <p>Ainda não possui conta? Cadastre-se no site.</p>
+        <Link className={stylesBtn.button} to="/login/criar">
+          Cadastro
+        </Link>
+      </div>
+    </section>
+  );
+};
+
+export default LoginForm;
