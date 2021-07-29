@@ -1,11 +1,11 @@
 import React from 'react';
 import Input from '../inputs/Input';
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 import useForm from '../../Hooks/useForm';
 import useFetch from '../../Hooks/useFetch';
-import { PASSWORD_RESET } from '../../api';
+import { PASSWORD_RESET } from '../../Api';
 import Error from '../Helper/Error';
-import { useNavigate } from 'react-router-dom';
+import {useHistory } from "react-router-dom";
 import Head from '../Helper/Head';
 
 const LoginPasswordReset = () => {
@@ -13,7 +13,7 @@ const LoginPasswordReset = () => {
   const [key, setKey] = React.useState('');
   const password = useForm();
   const { error, loading, request } = useFetch();
-  const navigate = useNavigate();
+  const navigate =useHistory();
 
   React.useEffect(() => {
     const params = new URLSearchParams(window.location.search);

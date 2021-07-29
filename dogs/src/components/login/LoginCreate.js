@@ -1,9 +1,9 @@
 import React from 'react';
 import Input from '../inputs/Input';
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 import Error from '../Helper/Error';
 import useForm from '../../Hooks/useForm';
-import { USER_POST } from '../../api';
+import { USER_POST } from '../../Api';
 import { UserContext } from '../../UserContext';
 import useFetch from '../../Hooks/useFetch';
 import Head from '../Helper/Head';

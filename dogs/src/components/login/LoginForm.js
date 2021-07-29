@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Input from '../inputs/Input';
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 import useForm from '../../Hooks/useForm';
 import { UserContext } from '../../UserContext';
 import Error from '../Helper/Error';
 import styles from './LoginForm.module.css';
-import stylesBtn from '../button/Button.module.css';
 import Head from '../Helper/Head';
 
 const LoginForm = () => {
@@ -43,7 +42,7 @@ const LoginForm = () => {
       <div className={styles.cadastro}>
         <h2 className={styles.subtitle}>Cadastre-se</h2>
         <p>Ainda não possui conta? Cadastre-se no site.</p>
-        <Link className={stylesBtn.button} to="/login/criar">
+        <Link to="/login/criar">
           Cadastro
         </Link>
       </div>

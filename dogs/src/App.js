@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import { BrowserRouter, Route, Switch, } from 'react-router-dom';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import Home from './components/Home';
-import Login from './Components/Login/Login';
+import Login from './components/login/Login';
 import { UserStorage } from './UserContext';
 
 
@@ -13,12 +13,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <UserStorage>
-          <Header />
+          <Header/>
           <main className="AppBody">
-            <Routes>
+            <Switch>
               <Route path="/" element={<Home />} />
               <Route path="login/*" element={<Login />} />
-            </Routes>
+            </Switch>
           </main>
           <Footer />
         </UserStorage>

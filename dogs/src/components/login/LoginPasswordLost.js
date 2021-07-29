@@ -1,9 +1,9 @@
 import React from 'react';
 import Input from '../inputs/Input';
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 import useForm from '../../Hooks/useForm';
 import useFetch from '../../Hooks/useFetch';
-import { PASSWORD_LOST } from '../../api';
+import { PASSWORD_LOST } from '../../Api';
 import Error from '../Helper/Error';
 import Head from '../Helper/Head';
 
