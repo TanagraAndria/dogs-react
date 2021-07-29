@@ -1,5 +1,6 @@
 .foto{
     width: 400px;
+    margin-top: 70px;
 }
 
 .section{
@@ -8,4 +9,5 @@
     padding: 0 1rem;
     margin: 0 auto;
     justify-content: space-around;
+    height: 39rem;
 }

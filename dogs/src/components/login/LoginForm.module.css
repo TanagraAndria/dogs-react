@@ -1,7 +1,9 @@
-.wrapper{
-    margin-bottom: 1rem;
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 16rem;
 }
-
 .input{
     border: 1px solid #eee;
     display: block;
@@ -11,6 +13,7 @@
     border-radius: 0.4rem;
     background: #eee;
     transition: 0.1s;
+    margin: 0 0 20px;
 }
 
 input:focus,
@@ -28,8 +31,12 @@ input:hover {
     padding-bottom: 0.5rem;
 }
 
-.error{
-    color: #f31;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
+h1{
+    padding: 0 0px 2.4rem;
+    font-size: 30px;
+}
+
+.to{
+    margin-top: 10px;
+    color: #fb1;
 }

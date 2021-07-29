@@ -1,4 +1,6 @@
 .button{
+    margin: 5px;
+    font-size: 1rem;
     font-size: 1rem;
     font-family: var(--type-first);
     cursor: pointer;
