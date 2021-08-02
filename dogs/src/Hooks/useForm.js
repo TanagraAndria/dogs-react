@@ -24,16 +24,15 @@ export const useForm = (type) => {
         }
     }
 
-    // eslint-disable-next-line no-unused-vars
-    function onChange ({target}){
+    function onChange({ target }) {
         if (error) validate(target.value);
         setValue(target.value);
-    }
+      }
 
     return {
         value,
         setValue,
-        onchange,
+        onChange,
         error,
         validate: ()=> validate(value),
         onBlur: () => validate(value),

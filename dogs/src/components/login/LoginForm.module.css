@@ -3,40 +3,30 @@ form{
     justify-content: center;
     flex-direction: column;
     width: 16rem;
-}
-.input{
-    border: 1px solid #eee;
-    display: block;
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.8rem;
-    border-radius: 0.4rem;
-    background: #eee;
-    transition: 0.1s;
-    margin: 0 0 20px;
+    margin-bottom: 2rem;
 }
 
-input:focus,
-input:hover {
-    outline: none;
-    border-color: #fb1;
-    background: white;
-    box-shadow: 0 0 0 3px #fea;
-}
-
-.label{
-    display: block;
-    font-size: 1rem;
+.cadastro {
+    margin-top: 4rem;
+  }
+  
+  .cadastro p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .subtitle {
+    font-family: var(--type-second);
     line-height: 1;
-    padding-bottom: 0.5rem;
-}
-
-h1{
-    padding: 0 0px 2.4rem;
-    font-size: 30px;
-}
-
-.to{
-    margin-top: 10px;
-    color: #fb1;
-}
+    font-size: 2rem;
+  }
+  
+  .subtitle::after {
+    content: '';
+    display: block;
+    background: #ddd;
+    height: 0.5rem;
+    width: 3rem;
+    border-radius: 0.2rem;
+  }
+  
