@@ -48,7 +48,7 @@ export const RegisterForm = () => {
                 value={password}
                 onChange={({ target }) => setPassword(target.value)}
                 />
-                <Button>Cadastrar</Button>
+                <Button onClick={handleSubmit}>Cadastrar</Button>
             </form>
 
         </div>

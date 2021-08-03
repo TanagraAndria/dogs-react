@@ -12,3 +12,13 @@ export function TOKEN_POST(body) {
         }
     }
 }
+
+export function PHOTO_GET(id) {
+    return {
+      url: `${API_Url}/api/photo/${id}`,
+      options: {
+        method: 'GET',
+        cache: 'no-store',
+      },
+    };
+  }

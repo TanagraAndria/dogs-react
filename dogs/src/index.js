@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 //import { BrowserRouter, Switch, Route, Redirect} from "react-router-dom";
 // import {isAuthenticated} from './auth';
 import {Login} from './pages/Login/Login';
-import {Home} from './pages/Home';
+import {Home} from './pages/Home/Home';
 import { LoginForm } from './components/login/LoginForm';
 import {Register} from './pages/Register/Register'
 // const privateRoute = ({component: Component, ...rest})=>(

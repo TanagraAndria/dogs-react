@@ -43,7 +43,7 @@ export const LoginForm = () => {
         />
         <Button><Link to="/home">Entrar</Link></Button>
       </form>
-      <Button><Link to="/register">Cadastro</Link></Button>
+      <Link to="/register">Cadastro</Link>
     </section>
 )
 }
