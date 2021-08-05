@@ -22,3 +22,5 @@ export function PHOTO_GET(id) {
       },
     };
   }
+
+  
